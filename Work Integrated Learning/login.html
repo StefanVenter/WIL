@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RealHome - Login</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+                body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+        }
+        header, footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #f1f1f1;
+        }
+        main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        table {
+            border-collapse: separate; /* Use separate to allow border-spacing */
+            border-spacing: 10px; /* Space between cells */
+            border: 1px solid black; /* Border around the table */
+        }
+        th, td {
+            padding: 10px; /* Space within cells */
+            border: 1px solid black; /* Border around cells */
+        }
+        input, button {
+            width: 100%;
+            max-width: 300px;
+            margin: 5px 0;
+            padding: 10px;
+        }
+        button {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">RealHome</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="search.html">Search</a></li>
+                <li><a href="listings.html">Listings</a></li>
+                <li><a href="agents.html">Agents</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="register.html">Register</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Login</h1>
+        <form id="login-form">
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <button type="submit">Login</button>
+        </form>
+        <table>
+            <p>Don't have an account? 
+                <td><a href="register.html">Register here</a></p></td>
+        </table>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 RealHome. All rights reserved.</p>
+    </footer>
+
+    <script src="login.js"></script>
+</body>
+</html>

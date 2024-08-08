@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RealHome - Our Agents</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .agents-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+        .agent-card {
+            text-align: center;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            padding: 16px;
+            border-radius: 10px;
+            background-color: #fff;
+        }
+        .agent-card img {
+            width: 100%;
+            border-radius: 50%;
+        }
+        .agent-card h2 {
+            font-size: 22px;
+            margin: 10px 0;
+        }
+        .agent-card p {
+            color: grey;
+            font-size: 18px;
+        }
+        .agent-card button {
+            border: none;
+            outline: 0;
+            display: inline-block;
+            padding: 8px;
+            color: white;
+            background-color: #000;
+            text-align: center;
+            cursor: pointer;
+            width: 100%;
+            font-size: 18px;
+            border-radius: 5px;
+        }
+        .agent-card button:hover {
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">RealHome</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="search.html">Search</a></li>
+                <li><a href="listings.html">Listings</a></li>
+                <li><a href="agents.html">Agents</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="register.html">Register</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="agents-page">
+        <h1>Our Agents</h1>
+        <div id="agents-grid" class="agents-grid"></div>
+        <p>Here are all of our current Agents.</p>
+        <p>You can contact any one of these Agents to get more information about the property that you are looking for.</p>
+    </main>
+
+    <footer>
+        <p>© 2024 RealHome. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            fetch('/api/agents')
+                .then(response => response.json())
+                .then(data => {
+                    const agentsGrid = document.getElementById('agents-grid');
+                    data.forEach(agent => {
+                        const agentCard = document.createElement('div');
+                        agentCard.className = 'agent-card';
+                        agentCard.innerHTML = `
+                            <img src="${agent.image_url}" alt="Agent Picture">
+                            <h2>${agent.name}</h2>
+                            <p class="title">${agent.title}</p>
+                            <p>Contact: ${agent.contact}</p>
+                            <button>Contact Agent</button>
+                        `;
+                        agentsGrid.appendChild(agentCard);
+                    });
+                });
+        });
+    </script>
+</body>
+</html>
+
+
+

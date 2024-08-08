@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RealHome - Search Properties</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">RealHome</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="search.html">Search</a></li>
+                <li><a href="listings.html">Listings</a></li>
+                <li><a href="agents.html">Agents</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="register.html">Register</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="search-page">
+        <h1>Search Properties</h1>
+        <form id="search-form">
+            <input type="text" id="location" placeholder="Location (e.g., Cape Town, Johannesburg)">
+            <select id="property-type">
+                <option value="">All Property Types</option>
+                <option value="house">House</option>
+                <option value="apartment">Apartment</option>
+                <option value="condo">Condo</option>
+            </select>
+            <input type="number" id="min-price" placeholder="Min Price (ZAR)">
+            <input type="number" id="max-price" placeholder="Max Price (ZAR)">
+            <button type="submit">Search</button>
+        </form>
+        <div id="search-results"></div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 RealHome. All rights reserved.</p>
+    </footer>
+
+    <script src="search.js"></script>
+</body>
+</html>
