@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RealHome - Your Real Estate Listing Platform</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">RealHome</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="search.html">Search</a></li>
+                <li><a href="listings.html">Listings</a></li>
+                <li><a href="agents.html">Agents</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="register.html">Register</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero" class="hero-background">
+            <h1>Find Your Dream Home</h1>
+            <p>Discover the perfect property with RealHome</p>
+            <a href="search.html" class="cta-button">Start Searching</a>
+        </section>
+
+        <section id="featured-listings">
+            <h2>Featured Listings</h2>
+            <div class="listing-grid">
+                <!-- Listing items will be dynamically inserted here -->
+            </div>
+        </section>
+
+        <section id="search-section">
+            <h2>Search Properties</h2>
+            <form id="search-form">
+                <input type="text" placeholder="Location" id="location">
+                <select id="property-type">
+                    <option value="">Property Type</option>
+                    <option value="house">House</option>
+                    <option value="apartment">Apartment</option>
+                    <option value="condo">Condo</option>
+                </select>
+                <input type="number" placeholder="Min Price" id="min-price">
+                <input type="number" placeholder="Max Price" id="max-price">
+                <button type="submit">Search</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 RealHome. All rights reserved.</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
